@@ -1,0 +1,16 @@
+
+syntax = "proto3";
+package {{grpc_package}};
+
+message TestRequest {
+    string Test = 1;
+}
+
+
+message TestResponse {
+    string Test = 1;
+}
+
+service {{grpc_service_name}} {
+    rpc Test({{grpc_package}}.TestRequest) returns ({{grpc_package}}.TestResponse);
+}
