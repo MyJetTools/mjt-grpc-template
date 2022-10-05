@@ -8,7 +8,7 @@ if !is_use_telemetry{
     file::delete("./src/grpc_server/telemetry.rs");
 }
 
-if !is_use_telemetry{
+if !is_use_psql{
     file::delete("./src/db_repositories");
 }
 
