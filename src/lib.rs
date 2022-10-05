@@ -4,8 +4,8 @@ mod grpc_server;
 {% if is_use_nosql != "no" %}mod nosql;{% endif %}
 mod settings;
 
-pub mod {{grpc_package}}_grpc {
-    tonic::include_proto!("{{grpc_package}}");
+pub mod {{grpc_package | snake_case}}_grpc {
+    tonic::include_proto!("{{grpc_package | snake_case}}");
 }
 
 pub use app_ctx::*;

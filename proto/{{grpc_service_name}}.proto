@@ -1,6 +1,6 @@
 
 syntax = "proto3";
-package {{grpc_package}};
+package {{grpc_package | snake_case}};
 
 message TestRequest {
     string Test = 1;
@@ -12,5 +12,5 @@ message TestResponse {
 }
 
 service {{grpc_service_name}} {
-    rpc Test({{grpc_package}}.TestRequest) returns ({{grpc_package}}.TestResponse);
+    rpc Test({{grpc_package | snake_case}}.TestRequest) returns ({{grpc_package | snake_case}}.TestResponse);
 }

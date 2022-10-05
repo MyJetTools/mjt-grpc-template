@@ -1,6 +1,6 @@
 use super::server::GrpcService;
-use crate::{{grpc_package}}_grpc::{TestRequest, TestResponse};
-use crate::{{grpc_package}}_grpc::{{ grpc_service_name | snake_case }}_server::{{grpc_service_name}};
+use crate::{{grpc_package | snake_case}}_grpc::{TestRequest, TestResponse};
+use crate::{{grpc_package | snake_case}}_grpc::{{ grpc_service_name | snake_case }}_server::{{grpc_service_name}};
 
 #[tonic::async_trait]
 impl {{grpc_service_name}} for GrpcService {

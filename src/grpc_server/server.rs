@@ -1,5 +1,5 @@
 use crate::AppContext;
-use crate::{{grpc_package}}_grpc::{{ grpc_service_name | snake_case }}_server::{{grpc_service_name}}Server;
+use crate::{{grpc_package | snake_case}}_grpc::{{ grpc_service_name | snake_case }}_server::{{grpc_service_name}}Server;
 
 use std::net::SocketAddr;
 use std::sync::Arc;
