@@ -10,7 +10,7 @@ use crate::{
     SettingsModel,
     {% if is_use_nosql != "no" %}TestDataNoSqlEntity,
     TEST_DATA_NOSQL_TABLE_NAME,{% endif %}
-    {% if is_use_sb == "subscriber" or is_use_sb == "both" %}TEST_EVENT_SB_TOPIC_NAME,{% endif %}
+    {% if is_use_sb == "subscriber" or is_use_sb == "both" %}TEST_EVENT_SB_TOPIC_NAME, TestEventListener,{% endif %}
 };
 
 pub const APP_VERSION: &'static str = env!("CARGO_PKG_VERSION");
