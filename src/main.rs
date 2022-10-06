@@ -23,7 +23,7 @@ async fn main() {
         APP_NAME.to_string(),
         settings_reader.clone(),
     );
-    {% if is_use_sb == "subscriber" or is_use_sb == "both" %}bind_sb_subscribers(app).await;{% endif %}
+    {% if is_use_sb == "subscriber" or is_use_sb == "both" %}bind_sb_subscribers(app.clone()).await;{% endif %}
 
     telemetry_writer.start(app.app_states.clone(), my_logger::LOGGER.clone());{% endif %}
 
