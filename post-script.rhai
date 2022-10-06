@@ -17,7 +17,7 @@ if is_use_nosql == "no"{
     file::delete("./src/nosql");
 }
 
-if is_use_sb != "subscriber" || is_use_sb != "both"   {
+if is_use_sb != "subscriber" && is_use_sb != "both"   {
     file::delete("./src/sb/test_event/test_event_listener.rs");
 }
 
