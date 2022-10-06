@@ -49,7 +49,7 @@ impl AppContext {
             .get_reader(TEST_DATA_NOSQL_TABLE_NAME.to_owned())
             .await;{% endif %}
 
-        {% if my_sb_connection != "no" %}
+        {% if is_use_sb != "no" %}
         let my_sb_connection = MyServiceBusClient::new(
             APP_NAME,
             settings_reader.clone(),
