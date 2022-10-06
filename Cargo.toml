@@ -41,6 +41,12 @@ my-no-sql-tcp-reader = { tag = "0.1.7", git = "https://github.com/MyJetTools/my-
 my-telemetry = { tag = "0.2.2", git = "https://github.com/MyJetTools/my-telemetry.git" }
 my-telemetry-writer = { tag = "0.1.3", git = "https://github.com/MyJetTools/my-telemetry-writer.git" }
 {% endif %}
+
+{% if is_use_sb != "no" %}
+my-service-bus-tcp-client = { tag = "0.1.7", git = "https://github.com/MyJetTools/my-service-bus-tcp-client.git" }
+my-service-bus-shared = { tag = "0.2.4", git = "https://github.com/MyJetTools/my-service-bus-shared.git" }
+{% endif %}
+
 tonic = { version = "*", features = ["tls", "tls-roots", "prost"] }
 hyper = { version = "*", features = ["full"] }
 tokio = { version = "*", features = ["full"] }
